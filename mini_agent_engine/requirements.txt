@@ -1,0 +1,10 @@
+﻿fastapi
+uvicorn
+pydantic
+
+cd "c:\Users\Rakshnda\tredence app\mini_agent_engine"
+
+git init
+git add .
+git commit -m "Initial commit: mini agent engine"
+gh repo create your-username/mini_agent_engine --public --source=. --remote=origin --push
