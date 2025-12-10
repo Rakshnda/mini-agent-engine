@@ -1,12 +1,12 @@
-mini-agent-engine
+**mini-agent-engine**
 
 A minimal workflow/agent engine (simplified LangGraph) built with FastAPI. Define nodes, edges, and state; run workflows end-to-end via HTTP API.
 
-Overview
+**Overview**
 
 This implementation provides a small but functional graph-based workflow engine. It supports defining nodes (Python functions), linking them using edges, maintaining shared state, and executing workflows step-by-step. Looping, branching, and simple tool registration are included.
 
-What This Engine Supports
+**What This Engine Supports**
 
 Nodes: Python functions decorated with @register_node, each receiving and returning state.
 
@@ -24,7 +24,8 @@ Async Execution: Workflows run in the background; clients can poll status.
 
 Execution Logging: Logs stored per run with executed nodes and state snapshots.
 
-How to Run
+**How to Run**
+
 1. Install dependencies
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -61,7 +62,7 @@ Check execution state
 Start-Sleep -Seconds 2
 Invoke-RestMethod -Uri "http://127.0.0.1:8000/graph/state/$runId" -Method Get
 
-Sample Workflow: Code Review (Option A)
+**Sample Workflow: Code Review** 
 
 Extract functions
 
@@ -75,7 +76,7 @@ Loop until quality_score >= threshold
 
 This demonstrates node execution, state mutation, branching, and looping. All logic is rule-based.
 
-Improvements
+**Improvements**
 
 Database persistence instead of in-memory storage
 
@@ -93,7 +94,7 @@ Graph visualization
 
 Dynamic node registration via API
 
-Tech Stack
+**Tech Stack**
 
 FastAPI
 
